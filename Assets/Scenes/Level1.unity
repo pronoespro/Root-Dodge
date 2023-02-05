@@ -147620,7 +147620,7 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 1
+  - 0.3
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
@@ -148655,6 +148655,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6546356822153507317, guid: 70892902c08b2dd4bbf164dbb7b5e21c, type: 3}
+      propertyPath: deathAnim
+      value: 
+      objectReference: {fileID: 1971200652}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70892902c08b2dd4bbf164dbb7b5e21c, type: 3}
 --- !u!4 &2746017050042226804 stripped
@@ -148667,19 +148671,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 481056066207495331, guid: 70892902c08b2dd4bbf164dbb7b5e21c, type: 3}
   m_PrefabInstance: {fileID: 2357284780526464214}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2746017050042226822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2746017050042226805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9816204d390472b498618023c31f8549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathAnim: {fileID: 1971200652}
 --- !u!1001 &8419882816726149409
 PrefabInstance:
   m_ObjectHideFlags: 0

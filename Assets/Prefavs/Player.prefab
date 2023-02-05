@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 309792075}
   - component: {fileID: 1404033488}
   - component: {fileID: 6295455974374267492}
+  - component: {fileID: 6546356822153507317}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -530,6 +531,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd1ad6b27ff0bed44b1b0a558c23f9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6546356822153507317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481056066207495331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9816204d390472b498618023c31f8549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAnim: {fileID: 0}
 --- !u!1 &481056066357208421
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,7 +6740,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2357284781685773062
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6743,7 +6757,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2357284781687323785
 GameObject:
   m_ObjectHideFlags: 0
