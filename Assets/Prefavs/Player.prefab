@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 481056066207495358}
   - component: {fileID: 309792075}
   - component: {fileID: 1404033488}
+  - component: {fileID: 6295455974374267492}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -64,8 +65,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.8, y: 1.9502306}
+  m_Offset: {x: 0, y: -0.15826094}
+  m_Size: {x: 0.51517636, y: 1.5545781}
   m_Direction: 0
 --- !u!50 &481056066207495499
 Rigidbody2D:
@@ -517,6 +518,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resource: {fileID: 309792075}
   varName: FireAmmount
+--- !u!114 &6295455974374267492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481056066207495331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1ad6b27ff0bed44b1b0a558c23f9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &481056066357208421
 GameObject:
   m_ObjectHideFlags: 0
@@ -6713,7 +6726,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2357284781685773062
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6730,7 +6743,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2357284781687323785
 GameObject:
   m_ObjectHideFlags: 0
