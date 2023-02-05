@@ -29,7 +29,7 @@ public class RootMovement : MonoBehaviour
     {
         transform.position = point;
     }
-    private bool canMove = true;
+    public bool canMove = true;
     public void PauseMovement()
     {
         canMove = false;

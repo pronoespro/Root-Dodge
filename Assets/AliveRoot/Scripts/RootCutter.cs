@@ -22,4 +22,8 @@ public class RootCutter : MonoBehaviour
             tentacleController.CutTentacle(collision.contacts[0].point);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+    }
 }

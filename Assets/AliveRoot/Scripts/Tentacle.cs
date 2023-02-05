@@ -1,3 +1,4 @@
+using PronoesPro.Entity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,24 +45,26 @@ public class Tentacle : MonoBehaviour
 
         lineRend.positionCount = segmentPosesList.Count;
 
-        StartCoroutine(GrowthAnimation());
+        //StartCoroutine(GrowthAnimation());
     }
-    /*
+    
     private void Update()
     {
+        float distanceWithFirstPoint = Vector3.Distance(initialPos, transform.position);
+
+        if (distanceWithFirstPoint > maxRootRadio)
+        {
+            rootMovement.PauseMovement();
+            return;
+        }
+        else
+        {
+            rootMovement.ContinueMovement();
+        }
+
         if (segmentPosesList.Count < maxPointsCount)
         {
-            float distanceWithFirstPoint = Vector3.Distance(initialPos, transform.position);
-
-            if (distanceWithFirstPoint > maxRootRadio)
-            {
-                rootMovement.PauseMovement();
-                return;
-            }
-            else
-            {
-                rootMovement.ContinueMovement();
-            }
+            
 
             float distanceWithLastPoint = Vector3.Distance(initialPos, segmentPosesList[segmentPosesList.Count - 1]);
             float distanceBetweenFirstAndLastPoint = Vector3.Distance(segmentPosesList[segmentPosesList.Count - 1], transform.position);
@@ -85,7 +88,7 @@ public class Tentacle : MonoBehaviour
         edgeCollider.SetPoints(segmentPosesList.Select((v3) => (Vector2)(v3 - transform.position)).Take(maxEdgeColliderPointsCount).ToList());
 
     }
-    */
+    
     IEnumerator GrowthAnimation()
     {
         while (true)

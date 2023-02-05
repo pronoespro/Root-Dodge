@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 601954982615562287}
   m_Layer: 0
   m_Name: Root
-  m_TagString: Untagged
+  m_TagString: Root
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   minTentacleLength: 2
   maxPointsCount: 35
   maxEdgeColliderPointsCount: 13
-  maxRootRadio: 10
+  maxRootRadio: 13
   distanceThreshold: 1
   cutThreshold: 0.2
   targetDir: {fileID: 7826798938507135662}
@@ -222,20 +222,20 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.059433945, g: 0.062313456, b: 0.066037714, a: 1}
-      key1: {r: 0.5, g: 0.16950339, b: 0.03018865, a: 1}
-      key2: {r: 1, g: 1, b: 1, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0.12929493, g: 0.31429088, b: 0.33359826, a: 1}
+      key1: {r: 0.4156863, g: 0.9803922, b: 0.9803922, a: 1}
+      key2: {r: 0.07385236, g: 0.18534023, b: 0.20838529, a: 0}
+      key3: {r: 0.22971533, g: 0.547853, b: 0.56039035, a: 0}
+      key4: {r: 0.06666667, g: 0.16862746, b: 0.19215688, a: 0}
+      key5: {r: 0.06666667, g: 0.16862746, b: 0.19215688, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 65535
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
+      ctime0: 3855
+      ctime1: 13107
+      ctime2: 27371
+      ctime3: 60138
+      ctime4: 65535
+      ctime5: 65535
       ctime6: 0
       ctime7: 0
       atime0: 0
@@ -247,7 +247,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 5
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
