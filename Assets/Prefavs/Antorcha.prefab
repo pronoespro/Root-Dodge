@@ -9858,7 +9858,6 @@ MonoBehaviour:
   lightToDisable: {fileID: 73328891111592296}
   resourceToAdd: Fire
   ammountToAdd: 1
-  collectSound: torch
 --- !u!61 &73328891315711104
 BoxCollider2D:
   m_ObjectHideFlags: 0

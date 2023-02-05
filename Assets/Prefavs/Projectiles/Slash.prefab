@@ -5058,7 +5058,7 @@ MonoBehaviour:
   damage: 1
   damageMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 64
   resourceName: 
 --- !u!114 &3091497670472090248
 MonoBehaviour:

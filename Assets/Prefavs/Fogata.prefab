@@ -4953,7 +4953,7 @@ GameObject:
   - component: {fileID: 5247545215413523661}
   - component: {fileID: 1787752681}
   - component: {fileID: 1787752680}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Fogata
   m_TagString: Untagged
   m_Icon: {fileID: 0}
