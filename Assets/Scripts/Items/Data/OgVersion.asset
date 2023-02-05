@@ -1,0 +1,262 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d91d30bb676db64fa49d0b32f0009c7, type: 3}
+  m_Name: OgVersion
+  m_EditorClassIdentifier: 
+  name: Punches and Kicks
+  description: 'Left click to punch, right click to charge a kick.
+
+'
+  canBeEquiped: 0
+  scale: {x: 1, y: 1}
+  sprite: {fileID: -1635557941, guid: 6bdeaf241c9f7e949ac2c301b95ab139, type: 3}
+  onHandStyle: 0
+  useStyle: 0
+  holdUseStyle: 0
+  primaryUse:
+    autoReuse: 1
+    canHoldDown: 1
+    useTime: 0.1
+    useDelay: 0
+    specialUses:
+    - name: Fast Punch Right/Kick Up
+      use:
+        name: Kick1
+        canCancel: 0
+        hasAirUse: 1
+        groundUpponUse: <losecontrol:>;<anim-var:attack>;<anim-var:attackType|4>;<move:rb::1>
+        groundHoldDownUse: '<move:rb local lookat:1: >'
+        groundChargeTimer: 0.1
+        groundChargeFinishUse: <shoot:ogDualDownSpinKick>;<regaincontrol:>
+        groundCancelChargeUse: 
+        airUpponUse: <losecontrol:>;<anim-var:attack>;<anim-var:attackType|4>;<move:rb::1>
+        airHoldDownUse: 
+        airChargeTimer: 0.1
+        airChargeFinishUse: <shoot:ogDualDownSpinKick>;<regaincontrol:>
+        airCancelChargeUse: 
+      requirements:
+      - name: 
+        forceCancel: 0
+        conditionScript: <vel:4:checkx>
+        useTargetInstead: 0
+      - name: 
+        forceCancel: 0
+        conditionScript: <vel:1:checky less>
+        useTargetInstead: 0
+    normalUses:
+    - name: Fast Punch Right/Kick Up
+      canCancel: 0
+      hasAirUse: 1
+      groundUpponUse: <losecontrol:>;<anim-var:attack>;<anim-var:attackType|1>
+      groundHoldDownUse: <tmove:rb local lookat:1:0>
+      groundChargeTimer: 0.15
+      groundChargeFinishUse: <regaincontrol:>;<shoot:ogForwardFist:20>
+      groundCancelChargeUse: 
+      airUpponUse: <losecontrol:>;<anim-var:attackType|2>;<anim-var:attack>;<shoot:ogDualSpinKick>;<move:rb:0:3>
+      airHoldDownUse: 
+      airChargeTimer: 0.3
+      airChargeFinishUse: <regaincontrol:>
+      airCancelChargeUse: 
+    - name: Fast Punch Left/Kick Down
+      canCancel: 0
+      hasAirUse: 1
+      groundUpponUse: <losecontrol:>;<anim-var:attack>;<anim-var:attackType|2>
+      groundHoldDownUse: <tmove:rb local lookat:1:0>
+      groundChargeTimer: 0.15
+      groundChargeFinishUse: <regaincontrol:>;<shoot:ogForwardFist:20>
+      groundCancelChargeUse: 
+      airUpponUse: <losecontrol:>;<anim-var:attack>;<anim-var:attackType|3>;<shoot:ogTackleKick:3>
+      airHoldDownUse: <tmove:rb local lookat:3:0>
+      airChargeTimer: 0.1
+      airChargeFinishUse: <regaincontrol:>
+      airCancelChargeUse: 
+    - name: Quick Kick Right/Kick Forward
+      canCancel: 0
+      hasAirUse: 1
+      groundUpponUse: <losecontrol:>;<anim-var:attack>;<anim-var:attackType|3>;<shoot:ogSingleStraightKick>
+      groundHoldDownUse: <tmove:rb local lookat:2:0>
+      groundChargeTimer: 0.15
+      groundChargeFinishUse: <regaincontrol:>
+      groundCancelChargeUse: 
+      airUpponUse: <losecontrol:>;<anim-var:attack>;<anim-var:attackType|4>;<shoot:ogDualDownSpinKick>;<tmove:rb
+        local lookat:3:2>
+      airHoldDownUse: 
+      airChargeTimer: 0.2
+      airChargeFinishUse: <regaincontrol:>
+      airCancelChargeUse: 
+  secondaryUse:
+    autoReuse: 0
+    canHoldDown: 1
+    useTime: 0
+    useDelay: 0.1
+    specialUses: []
+    normalUses:
+    - name: Kick1
+      canCancel: 1
+      hasAirUse: 1
+      groundUpponUse: <anim-var:attackType|5>;<anim-var:attack>
+      groundHoldDownUse: <move:rb:0:0>
+      groundChargeTimer: 0.5
+      groundChargeFinishUse: <shoot:ogSingleSpinKick>;<rumble:1:1:0.2>;<anim-var:finishCharge>
+      groundCancelChargeUse: <anim-var:attack>
+      airUpponUse: <losecontrol:>;<anim-var:attackType|1>;<anim-var:attack>
+      airHoldDownUse: <move:rb::-3>;<tmove:rb local:1>
+      airChargeTimer: 0.16
+      airChargeFinishUse: <regaincontrol:>;<shoot:ogDualFallKick:10>
+      airCancelChargeUse: 
+  firstSpecialUse:
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []
+  secondSpecialUse:
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []
+  finalSpecialUse:
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []
+  - name: 
+    use:
+      name: 
+      canCancel: 0
+      hasAirUse: 0
+      groundUpponUse: 
+      groundHoldDownUse: 
+      groundChargeTimer: 0
+      groundChargeFinishUse: 
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+    requirements: []

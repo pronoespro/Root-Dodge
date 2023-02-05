@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d91d30bb676db64fa49d0b32f0009c7, type: 3}
+  m_Name: FireFighter
+  m_EditorClassIdentifier: 
+  name: Punches and Kicks
+  description: 'Left click to punch, right click to charge a kick.
+
+'
+  canBeEquiped: 0
+  scale: {x: 1, y: 1}
+  sprite: {fileID: -1635557941, guid: 6bdeaf241c9f7e949ac2c301b95ab139, type: 3}
+  onHandStyle: 0
+  useStyle: 0
+  holdUseStyle: 0
+  primaryUse:
+    autoReuse: 1
+    canHoldDown: 1
+    useTime: 0.1
+    useDelay: 0
+    specialUses: []
+    normalUses:
+    - name: Slash
+      canCancel: 0
+      hasAirUse: 1
+      groundUpponUse: <losecontrol:>;<anim-var:attack>
+      groundHoldDownUse: <tmove:rb local:5:0>
+      groundChargeTimer: 0.16666667
+      groundChargeFinishUse: <regaincontrol:>;<shoot:slash:10>;<sfx:slash,slash1,slash2>
+      groundCancelChargeUse: 
+      airUpponUse: 
+      airHoldDownUse: 
+      airChargeTimer: 0
+      airChargeFinishUse: 
+      airCancelChargeUse: 
+  secondaryUse:
+    autoReuse: 0
+    canHoldDown: 1
+    useTime: 0
+    useDelay: 0
+    specialUses: []
+    normalUses: []
+  firstSpecialUse: []
+  secondSpecialUse: []
+  finalSpecialUse: []
