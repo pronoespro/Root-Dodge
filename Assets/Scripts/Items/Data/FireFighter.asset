@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d91d30bb676db64fa49d0b32f0009c7, type: 3}
   m_Name: FireFighter
   m_EditorClassIdentifier: 
-  name: Punches and Kicks
-  description: 'Left click to punch, right click to charge a kick.
-
-'
+  name: Fire machete
+  description: Shoots fire when not out.
   canBeEquiped: 0
   scale: {x: 1, y: 1}
   sprite: {fileID: -1635557941, guid: 6bdeaf241c9f7e949ac2c301b95ab139, type: 3}
@@ -23,20 +21,20 @@ MonoBehaviour:
   useStyle: 0
   holdUseStyle: 0
   primaryUse:
-    autoReuse: 1
+    autoReuse: 0
     canHoldDown: 1
-    useTime: 0.1
+    useTime: 0.2
     useDelay: 0
     specialUses: []
     normalUses:
     - name: Slash
       canCancel: 0
       hasAirUse: 1
-      groundUpponUse: <losecontrol:>;<anim-var:attack>
+      groundUpponUse: <need:Fire,1>;<losecontrol:>;<anim-var:attack>
       groundHoldDownUse: <tmove:rb local:5:0>
-      groundChargeTimer: 0.16666667
+      groundChargeTimer: 0.1666667
       groundChargeFinishUse: <regaincontrol:>;<shoot:slash:10>;<sfx:slash,slash1,slash2>
-      groundCancelChargeUse: 
+      groundCancelChargeUse: <regaincontrol:>;<shoot:slash:10>;<sfx:slash,slash1,slash2>
       airUpponUse: 
       airHoldDownUse: 
       airChargeTimer: 0

@@ -31,6 +31,11 @@ namespace PronoesPro.UI
         private bool midTransition;
         private string levelToLoad;
 
+        public void QuickLoadLevel(string name)
+        {
+            LoadLevel(name,mode:LoadSceneMode.Single);
+        }
+
         public void LoadLevel(string levelName, LoadSceneMode mode = LoadSceneMode.Single)
         {
             if (!midTransition)

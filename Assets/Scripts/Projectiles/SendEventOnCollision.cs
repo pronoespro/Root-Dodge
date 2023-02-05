@@ -21,7 +21,7 @@ public class SendEventOnCollision : MonoBehaviour
         if (collisionMask == (collisionMask | (1 << collision.gameObject.layer)))
         {
             target =(target!=null)?target: collision.transform;
-            Invoke("SendMessageToTarget",eventDelay);
+            Invoke("SendMessageToTarget",eventDelay); 
         }
     }
 

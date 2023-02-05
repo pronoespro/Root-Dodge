@@ -24,6 +24,18 @@ namespace PronoesPro.Projectiles {
 
         public Transform lastShooter;
 
+        public void CreateProjectile(string name,Vector3? pos=null,float rot=0, Transform spawner = null)
+        {
+            CreatePrefav(name);
+            lastShooter = spawner;
+            if (pos != null)
+            {
+                ChangeLastPrefavPosition(pos.Value);
+            }
+            ChangeLastPrefavRotation(rot);
+            InitializeLastProjectile();
+        }
+
         public void SetLastShooter(Transform shooter)
         {
             lastShooter = shooter;
@@ -33,10 +45,13 @@ namespace PronoesPro.Projectiles {
         {
             if (lastCreated != null)
             {
-                ProjectileBehabiour pb = lastCreated.GetComponent<ProjectileBehabiour>();
-                if (pb != null)
+                ProjectileBehabiour[] pb = lastCreated.GetComponents<ProjectileBehabiour>();
+                foreach (ProjectileBehabiour proj in pb)
                 {
-                    pb.Create(lastShooter);
+                    if (proj != null)
+                    {
+                        proj.Create(lastShooter);
+                    }
                 }
             }
         }
