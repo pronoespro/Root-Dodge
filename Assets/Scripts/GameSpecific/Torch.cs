@@ -1,4 +1,5 @@
 using PronoesPro.Entity;
+using PronoesPro.Sound;
 using UnityEngine;
 
 public class Torch : MonoBehaviour
@@ -9,6 +10,7 @@ public class Torch : MonoBehaviour
     public Transform lightToDisable;
     public string resourceToAdd = "Fire";
     public int ammountToAdd = 1;
+    public string collectSound;
 
     private bool used;
 
@@ -19,11 +21,12 @@ public class Torch : MonoBehaviour
             Resource[] resources = collision.GetComponents<Resource>();
             foreach (Resource res in resources)
             {
-                if (res.resourceName ==resourceToAdd) {
-                    collision.SendMessage("AddToResource", resourceToAdd+","+ ammountToAdd);
+                if (res.resourceName == resourceToAdd) {
+                    collision.SendMessage("AddToResource", resourceToAdd + "," + ammountToAdd);
                     used = true;
                     particles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
                     lightToDisable.gameObject.SetActive(false);
+                    SoundManager.instance.PlayAudio(collectSound);
                 }
             }
         }
