@@ -85,6 +85,7 @@ MonoBehaviour:
   frecuency: 7
   amplitude: 0.0325
   angle: 50
+  canMove: 1
 --- !u!114 &3962900345197684546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +152,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 248966ff2cac18e42bcae0ef167404ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
