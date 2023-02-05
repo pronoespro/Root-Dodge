@@ -49,6 +49,7 @@ namespace PronoesPro.Entity
                 {
                     resource += ammount;
                     OnResourceChanged.Invoke();
+                    Debug.Log("Changed " + resourceName + " by " + ammount);
                 }
             }
         }
@@ -63,6 +64,7 @@ namespace PronoesPro.Entity
                 {
                     resource -= ammount;
                     OnResourceChanged.Invoke();
+                    Debug.Log("Changed " + resourceName + " by " + ammount);
                 }
             }
         }
@@ -90,6 +92,7 @@ namespace PronoesPro.Entity
             string[] spitData = data.Split(',');
             if (spitData.Length > 1 && spitData[0] == resourceName)
             {
+                SendMessage("FoundResource");
                 int ammount;
                 if (int.TryParse(spitData[1], out ammount))
                 {

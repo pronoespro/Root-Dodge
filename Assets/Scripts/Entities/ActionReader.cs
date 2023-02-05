@@ -33,7 +33,7 @@ namespace PronoesPro.Scripting
         protected Vector2[] collisionPoints;
         protected Vector2 oldVelocity;
 
-        private bool needResource;
+        private bool needResource,foundResource;
 
         protected virtual void Start()
         {
@@ -88,10 +88,6 @@ namespace PronoesPro.Scripting
                     }
                     break;
                 case "shoot":
-                    Projectiles.ProjectileManager.instance.CreatePrefav(commandData[1]);
-                    Projectiles.ProjectileManager.instance.ChangeLastPrefavPosition(SpecialTransform().position);
-                    Projectiles.ProjectileManager.instance.SetLastShooter(SpecialTransform());
-                    Projectiles.ProjectileManager.instance.InitializeLastProjectile();
 
                     float rot = SpecialTransform().rotation.eulerAngles.z;
 
@@ -104,7 +100,7 @@ namespace PronoesPro.Scripting
                         }
                     }
 
-                    Projectiles.ProjectileManager.instance.ChangeLastPrefavRotation(rot);
+                    Projectiles.ProjectileManager.instance.CreateProjectile(commandData[1], SpecialTransform().position, rot, transform);
 
                     break;
                 case "spawnheld":
@@ -159,8 +155,9 @@ namespace PronoesPro.Scripting
                     if (commandData.Length > 1)
                     {
                         needResource = true;
+                        foundResource = false;
                         SendMessage("NeedResource", commandData[1]);
-                        if (needResource != false)
+                        if (needResource != false || foundResource==false)
                         {
                             return false;
                         }
@@ -592,9 +589,11 @@ namespace PronoesPro.Scripting
                                 else
                                 {
                                     needsResource = false;
+                                    foundResource = false;
+
                                     SendMessage("NeedResource", splitCondition[1]);
 
-                                    if (!needsResource)
+                                    if (!needsResource && foundResource)
                                     {
                                         return true;
                                     }
@@ -603,9 +602,10 @@ namespace PronoesPro.Scripting
                             else
                             {
                                 needsResource = false;
+                                foundResource = false;
                                 SendMessage("NeedResource", splitCondition[1]);
 
-                                if (!needsResource)
+                                if (!needsResource && foundResource)
                                 {
                                     return true;
                                 }
@@ -933,6 +933,11 @@ namespace PronoesPro.Scripting
         public void HasResource()
         {
             needResource = false;
+        }
+
+        public void FoundResource()
+        {
+            foundResource = true;
         }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8433322223547651562}
   - component: {fileID: 3359891435845086937}
   - component: {fileID: 7025792880931425438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809702171209037813}
-  m_LocalRotation: {x: -0, y: -0, z: -0.5302587, w: 0.84783596}
+  m_LocalRotation: {x: -0, y: -0, z: -0.63638693, w: 0.7713701}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4467721040614873321}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -64.046}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -79.046}
 --- !u!198 &8433322223547651562
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.24
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -746,10 +746,10 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 1
-    sphericalDirectionAmount: 0
-    randomPositionAmount: 1
+    sphericalDirectionAmount: 1
+    randomPositionAmount: 0.25
     radius:
-      value: 1
+      value: 0.5
       mode: 0
       spread: 0
       speed:
@@ -806,7 +806,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 270
+      value: 226.42
       mode: 0
       spread: 0
       speed:
@@ -4838,9 +4838,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -793757865
+  m_SortingLayer: 1
+  m_SortingOrder: 10
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4902,7 +4902,9 @@ GameObject:
   - component: {fileID: 3277838501352916915}
   - component: {fileID: 3091497670472090248}
   - component: {fileID: 4354366946538909210}
-  m_Layer: 0
+  - component: {fileID: -1366263510760598648}
+  - component: {fileID: 288774792336184360}
+  m_Layer: 9
   m_Name: Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5100,3 +5102,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4688177, y: 2.483347}
   m_EdgeRadius: 0
+--- !u!114 &-1366263510760598648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937164032293074422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb978903af6545b459f9343402cde2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - <drain:Fire,1>;
+  collisionTarget: {fileID: 0}
+--- !u!114 &288774792336184360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937164032293074422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4444b7da5885b43b7e833049554515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

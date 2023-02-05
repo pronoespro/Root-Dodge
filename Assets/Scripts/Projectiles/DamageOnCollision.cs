@@ -14,6 +14,13 @@ namespace PronoesPro.Projectiles
         [Space(10),Header("If not normal damage")]
         public string resourceName;
 
+        private EffectOnCollision effect;
+
+        private void Start()
+        {
+            effect = GetComponent<EffectOnCollision>();
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (damageMask == (damageMask | (1 << collision.gameObject.layer)))
@@ -25,6 +32,10 @@ namespace PronoesPro.Projectiles
                 else
                 {
                     collision.transform.SendMessage( "RemoveFromResource",resourceName+","+damage.ToString());
+                }
+                if (effect != null) {
+                    effect.Collide();
+                    effect.collisionTarget = (effect.collisionTarget != null) ? effect.collisionTarget : collision.transform;
                 }
             }
         }
@@ -40,6 +51,11 @@ namespace PronoesPro.Projectiles
                 else
                 {
                     collision.transform.SendMessage("RemoveFromResource", resourceName + damage.ToString());
+                }
+                if (effect != null)
+                {
+                    effect.Collide();
+                    effect.collisionTarget = (effect.collisionTarget != null) ? effect.collisionTarget : collision.transform;
                 }
             }
         }
